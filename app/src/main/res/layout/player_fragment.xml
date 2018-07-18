@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="player"
+            type="mohsin.reza.nrlapp.model.Player" />
+    </data>
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +23,8 @@
             android:layout_marginStart="@dimen/card_margin"
             android:layout_marginTop="@dimen/card_margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:circleImageUrl='@{@string/player_url(player.id)}'/>
 
         <TextView
             android:id="@+id/pdetail_name"
@@ -33,6 +41,7 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/player_image"
+            android:text="@{player.fullName}"
             tools:text="William Hopoate" />
 
         <TextView
@@ -48,6 +57,7 @@
             android:textDirection="locale"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/pdetail_name"
+            android:text="@{player.position}"
             tools:text="Centre" />
 
         <TextView
@@ -65,10 +75,10 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/pdetail_position"
-            tools:text="Last Match Statistics" />
+            android:text="Last Match Statistics" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/team_a_list"
+            android:id="@+id/lstat_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/default_margin"

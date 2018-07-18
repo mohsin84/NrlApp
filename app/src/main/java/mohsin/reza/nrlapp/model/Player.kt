@@ -26,5 +26,5 @@ data class Player(
         @SerializedName("career_stats")
         var careerStat: CareerStat? = null,
         @SerializedName("last_match_stats")
-        var lastMatchStat: List<LastMatchStat>? = null
+        var lastMatchStat: LastMatchStat? = null
 )

@@ -1,6 +1,9 @@
 package mohsin.reza.nrlapp.depinjection
 
 import dagger.Module
+import dagger.android.ContributesAndroidInjector
+import mohsin.reza.nrlapp.ui.MatchFragment
+import mohsin.reza.nrlapp.ui.PlayerFragment
 
 /**
  * Dagger Module for Fragment
@@ -9,9 +12,9 @@ import dagger.Module
 @Module
 abstract class FragmentBuildersModule {
 
-//    @ContributesAndroidInjector
-//    abstract fun contributePropertyFragment(): PropertyFragment
-//
-//    @ContributesAndroidInjector
-//    abstract fun contributeTitleFragment(): TitleFragment
+    @ContributesAndroidInjector
+    abstract fun contributeMatchFragment(): MatchFragment
+
+    @ContributesAndroidInjector
+    abstract fun contributePlayerFragment(): PlayerFragment
 }

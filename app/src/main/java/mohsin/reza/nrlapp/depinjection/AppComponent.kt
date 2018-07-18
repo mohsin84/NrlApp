@@ -5,7 +5,6 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import mohsin.reza.nrlapp.NrlApp
-import mohsin.reza.propertyapp.di.AppModule
 import javax.inject.Singleton
 
 /***
@@ -26,5 +25,5 @@ interface AppComponent {
         fun build(): AppComponent
     }
 
-    fun inject(propertyApp: NrlApp)
+    fun inject(nrlApp: NrlApp)
 }

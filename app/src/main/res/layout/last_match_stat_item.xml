@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="customstat"
+            type="mohsin.reza.nrlapp.model.CustomStat" />
+    </data>
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +23,7 @@
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginStart="@dimen/default_margin"
             android:layout_marginTop="@dimen/card_margin"
+            android:text="@{customstat.name}"
             android:textAlignment="viewStart"
             android:textColor="@android:color/primary_text_light"
             android:textDirection="locale"
@@ -23,6 +31,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Goals: " />
+
         <TextView
             android:id="@+id/player_stat_value"
             android:layout_width="wrap_content"
@@ -31,6 +40,7 @@
             android:layout_marginEnd="@dimen/default_margin"
             android:layout_marginStart="@dimen/default_margin"
             android:layout_marginTop="@dimen/card_margin"
+            android:text="@{customstat.name}"
             android:textAlignment="viewStart"
             android:textColor="@android:color/primary_text_light"
             android:textDirection="locale"

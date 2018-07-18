@@ -9,4 +9,7 @@ object Objects {
             false
         } else o1 == o2
     }
+    fun formatStatType(statType: String?) : String{
+        return statType?.capitalize()?.replace('_',' ')?:""
+    }
 }

@@ -2,5 +2,5 @@
     <string name="app_name">NRL App</string>
     <string name="retry">Retry</string>
     <string name="unknown_error">Unknown Error</string>
-
+    <string name="player_url">http://media.foxsports.com.au/match-centre/includes/images/headshots/landscape/nrl/%s.jpg</string>
 </resources>

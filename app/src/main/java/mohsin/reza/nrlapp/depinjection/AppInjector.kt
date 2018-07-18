@@ -32,11 +32,11 @@ import mohsin.reza.nrlapp.NrlApp
  */
 object AppInjector {
 
-    fun init(propertyApp: NrlApp) {
-        //DaggerAppComponent.builder().application(propertyApp).build().inject(propertyApp) //To get App component need to make a clean build first.
+    fun init(nrlApp: NrlApp) {
+        DaggerAppComponent.builder().application(nrlApp).build().inject(nrlApp) //To get App component need to make a clean build first.
         // So block this if required and rebuild. All component will be generated.
 
-        propertyApp.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
+        nrlApp.registerActivityLifecycleCallbacks(object : Application.ActivityLifecycleCallbacks {
             override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
                 handleActivity(activity) //To register Lifecycle call and doing injection
             }
