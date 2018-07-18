@@ -7,11 +7,9 @@ I used <a href="https://google.github.io/dagger/">Dagger 2 </a>Dependency Inject
 acces to shared dependency like use of <a href="http://square.github.io/retrofit/"> Retrofit</a> to make asynchronous API calls,
 also for scope instances like Singleton repositories. Used Googles's <a href="https://developer.android.com/topic/libraries/data-binding/index.html">Android Data Binding</a>
 for continuous data integration with UI in a MVVM design pattern. Here the MainActivity act as a controller and controls the flow to 
-fragment. Inside fragment used Livedata to observe data changes in ViewModel. Used the repository to maintain separation of concern and also to keep the ViewModel lean. In Repository class the decision to access data from network or from Room database is made. Used framework provide utility classes like <a href="https://developer.android.com/topic/libraries/architecture/guide.html#addendum">NetworkBoundResouce </a> to manage multiple data sources (DB and network) and some others factory pattern classes as well.
+fragment. Inside fragment used Livedata to observe data changes in ViewModel. Used the repository to maintain separation of concern and also to keep the ViewModel lean. 
 
-Lazy loading is achieved using <a href="http://bumptech.github.io/glide/">Glide</a>library with android data binding component. With 
-Glide I resized bitmap before loading into imageView along with cropping for faster imageLoad. By deafult all images will be loaded to 
-memory. Disk cache is also possible with few strategy for caching (did not added any disk cache in this project).
+Lazy loading is achieved using <a href="http://bumptech.github.io/glide/">Glide</a>library with android data binding component. By deafult all images will be loaded to memory. Disk cache is also possible with few strategy for caching (did not added any disk cache in this project).
 
 Used CardView for slick design and ConstraintLayout for optimized Layout.
 
@@ -35,5 +33,3 @@ Coding architecture/ Design Pattern:
  <ol>
 <li> <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">MVVM (Model View ViewModel)</a></li>
 </ol>
-
-
