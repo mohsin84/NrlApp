@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.android.example.github.util
+package mohsin.reza.nrlapp.Util
 
 import android.arch.lifecycle.LiveData
-import com.android.example.github.api.ApiResponse
+import mohsin.reza.nrlapp.network.ApiResponse
 import retrofit2.CallAdapter
 import retrofit2.CallAdapter.Factory
 import retrofit2.Retrofit

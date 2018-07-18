@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/snowWhite">
+
+        <ImageView
+            android:id="@+id/player_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/photo_height"
+            android:layout_marginEnd="@dimen/card_margin"
+            android:layout_marginStart="@dimen/card_margin"
+            android:layout_marginTop="@dimen/card_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pdetail_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/row_margin"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/primary_text_light"
+            android:textDirection="locale"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/player_image"
+            tools:text="William Hopoate" />
+
+        <TextView
+            android:id="@+id/pdetail_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/row_margin"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/primary_text_light"
+            android:textDirection="locale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pdetail_name"
+            tools:text="Centre" />
+
+        <TextView
+            android:id="@+id/lbl_last_match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/row_margin"
+            android:background="@color/ivory"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textDirection="locale"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pdetail_position"
+            tools:text="Last Match Statistics" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/team_a_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/row_margin"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_last_match"
+            tools:listitem="@layout/last_match_stat_item" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

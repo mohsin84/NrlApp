@@ -1,5 +1,4 @@
-package mohsin.reza.propertyapp.di
-
+package mohsin.reza.nrlapp.depinjection
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import mohsin.reza.nrlapp.MainActivity

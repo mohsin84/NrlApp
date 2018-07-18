@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        cardCornerRadius="10dp"
+        cardElevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/snowWhite">
+
+            <TextView
+                android:id="@+id/stat_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/row_margin"
+                android:background="@color/navajowhite"
+                android:textAlignment="center"
+                android:textColor="@android:color/primary_text_light"
+                android:textDirection="locale"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Stat Type" />
+
+            <TextView
+                android:id="@+id/team_a_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/row_margin"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/primary_text_light"
+                android:textDirection="locale"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/stat_name"
+                tools:text="Penrith" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/team_a_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/row_margin"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/team_a_name"
+                tools:listitem="@layout/top_player_item" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="@fraction/guide_percent" />
+
+            <TextView
+                android:id="@+id/team_b_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/row_margin"
+                android:textColor="@android:color/primary_text_light"
+                android:textDirection="locale"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/stat_name"
+                tools:text="Canterbury" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/team_b_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/row_margin"
+                app:layoutManager="LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/team_b_name"
+                tools:listitem="@layout/top_player_item" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</layout>

@@ -4,12 +4,12 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MediatorLiveData
 import android.support.annotation.MainThread
 import android.support.annotation.WorkerThread
-import com.android.example.github.api.ApiEmptyResponse
-import com.android.example.github.api.ApiErrorResponse
-import com.android.example.github.api.ApiResponse
-import com.android.example.github.api.ApiSuccessResponse
 import mohsin.reza.nrlapp.AppExecutors
-import mohsin.reza.propertyapp.vo.Resource
+import mohsin.reza.nrlapp.model.Resource
+import mohsin.reza.nrlapp.network.ApiEmptyResponse
+import mohsin.reza.nrlapp.network.ApiErrorResponse
+import mohsin.reza.nrlapp.network.ApiResponse
+import mohsin.reza.nrlapp.network.ApiSuccessResponse
 
 abstract class NetworkBoundResource<ResultType, RequestType>
 @MainThread constructor(private val appExecutors: AppExecutors) {

@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.vo
+package mohsin.reza.nrlapp.model
 
 /**
  * A generic class that holds a value with its loading status.

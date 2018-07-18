@@ -2,12 +2,13 @@ package mohsin.reza.propertyapp.di
 
 import android.app.Application
 import android.arch.persistence.room.Room
-import com.android.example.github.util.LiveDataCallAdapterFactory
 import dagger.Module
 import dagger.Provides
+import mohsin.reza.nrlapp.Util.LiveDataCallAdapterFactory
 import mohsin.reza.nrlapp.database.MatchDao
 import mohsin.reza.nrlapp.database.NrlDb
-import mohsin.reza.propertyapp.api.NrlServices
+import mohsin.reza.nrlapp.depinjection.ViewModelModule
+import mohsin.reza.nrlapp.network.NrlServices
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -20,9 +21,9 @@ import javax.inject.Singleton
 class AppModule {
     @Singleton
     @Provides
-    fun provideNrlService(): NrlServices {
+    fun provideNrlMatch(): NrlServices {
         return Retrofit.Builder()
-                .baseUrl("http://demo0065087.mockable.io/test/")
+                .baseUrl("https://statsapi.foxsports.com.au/3.0/api/sports/league/matches/NRL20172101/topplayerstats.json;type=fantasy_points;type=tackles;type=runs;type=run_metres?limit=5&userkey=A00239D3-45F6-4A0A-810C-54A347F144C2")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(LiveDataCallAdapterFactory())
                 .build()

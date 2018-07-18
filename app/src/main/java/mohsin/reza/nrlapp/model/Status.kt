@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.vo
+package mohsin.reza.nrlapp.model
 
 /**
  * Status of a resource that is provided to the UI.

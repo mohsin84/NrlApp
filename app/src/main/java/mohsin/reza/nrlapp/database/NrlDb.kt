@@ -8,11 +8,11 @@ import mohsin.reza.nrlapp.model.Match
 * Room database entities and dao objects
 * */
 
-@Database(
-        entities = [Match::class],
-        version = 1,
-        exportSchema = false
-)
+//@Database(
+//        entities = [Match::class],
+//        version = 1,
+//        exportSchema = false
+//)
 abstract class NrlDb : RoomDatabase() {
 
     abstract fun propertyDao(): MatchDao

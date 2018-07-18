@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.util
+package mohsin.reza.nrlapp.Util
 
 import android.arch.lifecycle.LiveData
 

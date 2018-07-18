@@ -1,10 +1,11 @@
-package mohsin.reza.propertyapp.di
+package mohsin.reza.nrlapp.depinjection
 
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import mohsin.reza.nrlapp.NrlApp
+import mohsin.reza.propertyapp.di.AppModule
 import javax.inject.Singleton
 
 /***

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/snowWhite">
+
+        <TextView
+            android:id="@+id/player_stat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/card_margin"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/primary_text_light"
+            android:textDirection="locale"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Goals: " />
+        <TextView
+            android:id="@+id/player_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/card_margin"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/primary_text_light"
+            android:textDirection="locale"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@id/player_stat_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

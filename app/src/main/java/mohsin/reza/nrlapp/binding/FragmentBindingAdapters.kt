@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.binding
+package mohsin.reza.nrlapp.binding
 
 import android.databinding.BindingAdapter
 import android.support.v4.app.Fragment

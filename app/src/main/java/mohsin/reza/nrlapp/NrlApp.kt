@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
-import mohsin.reza.propertyapp.di.AppInjector
+import mohsin.reza.nrlapp.depinjection.AppInjector
 import javax.inject.Inject
 
 class NrlApp : Application(), HasActivityInjector {

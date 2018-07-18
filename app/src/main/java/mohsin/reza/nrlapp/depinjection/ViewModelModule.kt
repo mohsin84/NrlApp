@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.di
+package mohsin.reza.nrlapp.depinjection
 
 import android.arch.lifecycle.ViewModelProvider
 import dagger.Binds

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package mohsin.reza.propertyapp.di
+package mohsin.reza.nrlapp.depinjection
 
 import android.app.Activity
 import android.app.Application

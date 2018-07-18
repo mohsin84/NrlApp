@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.di
+package mohsin.reza.nrlapp.depinjection
 
 /***
  * Marker interface for Fragment and Activity injection

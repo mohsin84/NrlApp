@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.example.github.api
+package mohsin.reza.nrlapp.network
 
 import retrofit2.Response
 

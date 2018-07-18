@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.util
+package mohsin.reza.nrlapp.Util
 
 object Objects {
     fun equals(o1: Any?, o2: Any?): Boolean {

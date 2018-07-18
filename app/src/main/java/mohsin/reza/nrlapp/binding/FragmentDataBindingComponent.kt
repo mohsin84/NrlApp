@@ -1,10 +1,11 @@
-package mohsin.reza.propertyapp.binding
+package mohsin.reza.nrlapp.binding
 
 import android.databinding.DataBindingComponent
 import android.support.v4.app.Fragment
 
 class FragmentDataBindingComponent(fragment: Fragment) : DataBindingComponent {
+
     private val adapter = FragmentBindingAdapters(fragment)
 
-    override fun getFragmentBindingAdapters() = adapter
+    override fun getFragmentBindingAdapters(): FragmentBindingAdapters = adapter
 }

@@ -1,4 +1,4 @@
-package mohsin.reza.propertyapp.api
+package mohsin.reza.nrlapp.network
 
 interface NrlServices {
 
