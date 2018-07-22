@@ -19,6 +19,5 @@ class FragmentBindingAdapters @Inject constructor(internal val fragment: Fragmen
                 .load(url)
                 .apply(requestOption)
                 .into(imageView)
-        //TODO: add default url for error
     }
 }

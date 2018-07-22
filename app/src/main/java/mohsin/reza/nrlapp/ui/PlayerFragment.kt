@@ -19,7 +19,6 @@ import mohsin.reza.nrlapp.databinding.PlayerFragmentBinding
 import mohsin.reza.nrlapp.depinjection.Injectable
 import mohsin.reza.nrlapp.model.CustomStat
 import mohsin.reza.nrlapp.model.LastMatchStat
-import mohsin.reza.nrlapp.model.Player
 import mohsin.reza.nrlapp.model.TopPlayer
 import mohsin.reza.nrlapp.ui.adapters.PlayerAdapter
 import javax.inject.Inject
@@ -73,11 +72,17 @@ class PlayerFragment : Fragment(), Injectable {
                 binding.player = resourceRows.data
                 val lastMatchStat: LastMatchStat? = resourceRows.data.lastMatchStat
 
-                //TODO: Need to debug
+                //TODO: Need to put in viewModel
                 val clazz = lastMatchStat!!::class.java
-                val customList= mutableListOf<CustomStat>()
-                clazz.fields.forEach{
-                    customList.add(CustomStat(it.name,it.getInt(it.name)))
+                val customList = mutableListOf<CustomStat>()
+                clazz.declaredFields.forEach {
+                    it.isAccessible = true
+                    val fname = it.name
+                            .capitalize()
+                            .split(Regex("(?=[\\p{Lu}]|[0-9]+)"), 5)
+                            .joinToString(separator = " ", postfix = " :")
+                            .trim()
+                    customList.add(CustomStat(fname, it.get(lastMatchStat) as Int? ?: 0))
                 }
                 adapter.submitList(customList)
             } else {
@@ -85,13 +90,13 @@ class PlayerFragment : Fragment(), Injectable {
             }
         })
     }
+
     companion object {
-        fun getIntance(topPlayer:TopPlayer?, teamid:Int?): PlayerFragment
-        {
+        fun getIntance(topPlayer: TopPlayer?, teamid: Int?): PlayerFragment {
             val playerFragment = PlayerFragment()
             val bundle = Bundle()
-            bundle.putInt("First", topPlayer?.id?:0)
-            bundle.putInt("Second", teamid?:0)
+            bundle.putInt("First", topPlayer?.id ?: 0)
+            bundle.putInt("Second", teamid ?: 0)
             playerFragment.arguments = bundle
             return playerFragment
         }

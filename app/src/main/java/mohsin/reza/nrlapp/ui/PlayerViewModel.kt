@@ -26,7 +26,9 @@ constructor(matchRepository: MatchRepository) : ViewModel() {
             if (input == null) {
                 AbsentLiveData.create()       //if in any case refresh is null will show empty data
             } else
+            {
                 matchRepository.getPlayerData(playerId.value, teamid.value) //Getting data from Repository
+            }
         }
 
     }
